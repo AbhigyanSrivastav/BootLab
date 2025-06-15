@@ -1,6 +1,6 @@
-import { Browser, ImageInfo, OS } from "../Types/types";
+import { ImageInfo } from "../Types/types";
 
-export const browserImages: Record<string, ImageInfo> = {
+export const imageConfigs: Record<string, ImageInfo> = {
   chrome: {
     name: "Google Chrome",
     image: "kasmweb/chrome:1.17.0",
@@ -19,9 +19,6 @@ export const browserImages: Record<string, ImageInfo> = {
     command:
       "sudo docker run --rm -it --shm-size=512m -p 6901:6901 -e VNC_PW=password kasmweb/edge:1.17.0",
   },
-};
-
-export const osImages: Record<string, ImageInfo> = {
   ubuntu: {
     name: "Ubuntu Desktop",
     image: "kasmweb/ubuntu-jammy-desktop:1.17.0",
