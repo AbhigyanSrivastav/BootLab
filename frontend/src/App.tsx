@@ -1,13 +1,9 @@
 import { Home } from "@/components/Home";
-import { Header } from "@/components/Header";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-900 flex flex-col">
-      <Header />
-      <div className="flex flex-1 items-center justify-center">
-        <Home />
-      </div>
+    <div className="min-h-[75vh] min-w-[75vw] bg-gradient-to-br rounded-lg from-gray-900 via-gray-800 to-gray-900">
+      <Home />
     </div>
   );
 }

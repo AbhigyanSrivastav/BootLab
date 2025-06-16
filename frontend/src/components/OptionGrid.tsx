@@ -77,23 +77,23 @@ export function OptionGrid({ options, selected, onSelect }: OptionGridProps) {
         <button
           key={option.id}
           onClick={() => onSelect(option.name)}
-          className={`group relative p-6 rounded-2xl border-2 transition-all duration-300 text-left transform hover:scale-105 ${
+          className={`group relative p-6 rounded-2xl border-2 transition-all duration-300 text-left transform hover:scale-105 backdrop-blur-sm ${
             selected === option.name
-              ? "border-blue-500 bg-gradient-to-br from-blue-500/10 to-purple-500/10 shadow-xl shadow-blue-500/20"
-              : "border-gray-700/50 bg-gradient-to-br from-gray-800/50 to-gray-900/50 hover:border-gray-600 hover:shadow-lg backdrop-blur-sm"
+              ? "border-blue-400/60 bg-gradient-to-br from-blue-500/20 to-purple-500/20 shadow-xl shadow-blue-500/20"
+              : "border-white/20 bg-gradient-to-br from-white/10 to-white/5 hover:border-white/30 hover:shadow-lg"
           }`}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
           <div className="relative z-10">
             <div className="flex items-center gap-4 mb-4">
               {getIcon(option.id)}
-              <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors duration-200">
+              <h3 className="text-xl font-bold text-white group-hover:text-blue-200 transition-colors duration-200">
                 {option.name}
               </h3>
             </div>
 
-            <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-200 leading-relaxed">
+            <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-200 leading-relaxed">
               {option.description}
             </p>
 

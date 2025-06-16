@@ -1,9 +1,5 @@
-"use client"
+import type { LaunchButtonProps } from "@/types/types"
 
-interface LaunchButtonProps {
-  selected: string | null
-  onLaunch: () => void
-}
 
 export function LaunchButton({ selected, onLaunch }: LaunchButtonProps) {
   if (!selected) return null
