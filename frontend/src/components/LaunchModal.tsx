@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Button } from "@/components/shadcn-ui/button";
-import { Copy, ExternalLink, X } from "lucide-react";
+import { Copy, ExternalLink, X, Clock, AlertCircle } from "lucide-react"
 import type { LaunchModalProps } from "@/types/types";
 
 export function LaunchModal({
@@ -54,6 +54,24 @@ export function LaunchModal({
 
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-200 text-sm">
                 {platform.type === "browser" ? "Web Browser" : "Operating System"}
+              </div>
+               <div className="bg-amber-500/10 border border-amber-400/30 rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 space-y-2">
+                <div className="flex items-center justify-center gap-2 text-amber-400">
+                  <Clock className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <span className="font-semibold text-sm sm:text-base">Session Duration</span>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl sm:text-3xl font-bold text-amber-300 mb-1">2:30</div>
+                  <p className="text-amber-200/80 text-xs sm:text-sm">
+                    Your environment will be available for 2 minutes and 30 seconds
+                  </p>
+                </div>
+                <div className="flex items-start gap-2 text-amber-200/70 text-xs sm:text-sm">
+                  <AlertCircle className="w-3 h-3 sm:w-4 sm:h-4 mt-0.5 flex-shrink-0" />
+                  <p className="leading-relaxed">
+                    Save your work frequently. The session will automatically terminate after the time limit.
+                  </p>
+                </div>
               </div>
 
               <Button

@@ -27,7 +27,7 @@ export interface Options {
 export type Browser = "chrome" | "firefox" | "edge";
 export type OS = "ubuntu" | "alpine";
 
-export type ImageType = "browser" | "os";
+export type ImageType = "browser" | "os" | string;
 
 export interface ImageOption {
   id: string;

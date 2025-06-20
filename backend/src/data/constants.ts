@@ -1,6 +1,6 @@
 import { ImageGroup } from "../Types/types";
 
-export const imageGroups:ImageGroup[] = [
+export const imageGroups: ImageGroup[] = [
   {
     type: "browser",
     label: "Browsers",
@@ -37,4 +37,35 @@ export const imageGroups:ImageGroup[] = [
       },
     ],
   },
+  {
+    type: "dev",
+    label: "Developer Tools",
+    items: [
+      {
+        id: "vscode",
+        name: "VS Code",
+        description: "Code editor in a container",
+        type: "dev",
+      },
+      {
+        id: "terminal",
+        name: "Terminal",
+        description: "Minimal shell environment",
+        type: "dev",
+      },
+    ],
+  },
+  {
+    type: "game",
+    label: "Games",
+    items: [
+      {
+        id: "doom",
+        name: "DOOM",
+        description: "Classic first-person shooter",
+        type: "game",
+      },
+    ],
+  },
 ];
+
