@@ -83,7 +83,7 @@ export const launchImage = async (
       status: 200,
       success: true,
       data: {
-        data: `https://localhost:${port}`,
+        data: `https://${process.env.HOST}:${port}`,
         message: "Launched successfully.",
         error: false,
       },

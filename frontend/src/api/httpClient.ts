@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "http://localhost:5000/api"; //dev
+const url = "/api"; //proxy
 
 const httpClient = axios.create({
     baseURL: url,
